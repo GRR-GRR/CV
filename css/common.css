@@ -1,0 +1,74 @@
+*{
+  margin: 0;
+}
+
+html { 
+  background: #ffffff url(img/BG-GERONIMO.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body {
+/*  font-family: 'Arimo', sans-serif;
+font-family: 'Rajdhani', sans-serif;*/
+  font-family: 'Arimo', cursive;
+  padding: 80px;
+}
+a {
+  font-size: 12px;
+  font-family: 'Roboto Mono', monospace;
+  text-decoration: none;
+  color: #000000;
+}
+a:visited {
+  color: rgb(240,60,98);
+}
+a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: #000000;
+  background: rgb(240,60,98);
+}
+time {
+  font-size:12px;
+  background: rgb(243,234,222);
+}
+h1 {
+  font-size: 18px;
+  font-family: 'Roboto Mono', monospace;
+  position: fixed;
+  margin-left: -40px;
+  top: 5px;
+}
+h2 {
+  padding:40px;
+  color: #ffffff;
+  font-size: 18px;
+  background: #000000;
+}
+h2 a, h2 a:visited {
+  color: #ffffff;
+  font-size: 18px;
+  font-family: 'Arimo', cursive;
+}
+h3 {
+  font-size:14px; 
+}
+
+/* juste pour Antoine
+--------------------------------------*/
+#top, #bottom, #left, #right {
+  background: #f03c62;
+
+/*
+TABLEAU
+ -------------------------------------------------------*/
+table {
+  margin: auto;
+}
+
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td {font-family:Arial, sans-serif;font-size:14px;padding:10px 16px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th {font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 16px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-21yu {background-color:#f03c62; vertical-align:top}
+.tg .tg-gqdk {background-color:#000000;vertical-align:top}

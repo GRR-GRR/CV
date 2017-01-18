@@ -1,0 +1,340 @@
+/* FONTS
+------------------------------------------------------- */
+
+/*@font-face {
+    font-family: 'lilgroteskbold';
+    src: url('font/lilgrotesk-bold-webfont.eot');
+    src: url('font/lilgrotesk-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/lilgrotesk-bold-webfont.woff2') format('woff2'),
+         url('font/lilgrotesk-bold-webfont.woff') format('woff'),
+         url('font/lilgrotesk-bold-webfont.ttf') format('truetype'),
+         url('font/lilgrotesk-bold-webfont.svg#lilgroteskbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'lilgroteskregular';
+    src: url('font/lilgrotesk-regular-webfont.eot');
+    src: url('font/lilgrotesk-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/lilgrotesk-regular-webfont.woff2') format('woff2'),
+         url('font/lilgrotesk-regular-webfont.woff') format('woff'),
+         url('font/lilgrotesk-regular-webfont.ttf') format('truetype'),
+         url('font/lilgrotesk-regular-webfont.svg#lilgroteskregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+@keyframes blinker {  
+  from { opacity: 1.0; }
+  to { opacity: 0.0; }
+}
+@-webkit-keyframes webkitblinker {  
+  from { opacity: 1.0; }
+  to { opacity: 0.0; }
+}
+@-moz-keyframes mozblinker {  
+  from { opacity: 1.0; }
+  to { opacity: 0.0; }
+}
+@-o-keyframes oblinker {  
+  from { opacity: 1.0; }
+  to { opacity: 0.0; }
+}   
+
+/* ELEMENTS
+------------------------------------------------------- */
+*{
+  margin: 0;
+}
+
+html { 
+  background: #ffffff url(img/BG-GERONIMO.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body {
+/*  font-family: 'Arimo', sans-serif;
+font-family: 'Rajdhani', sans-serif;*/
+  font-family: 'Arimo', cursive;
+  padding: 80px;
+}
+a {
+  font-size: 12px;
+  font-family: 'Roboto Mono', monospace;
+  text-decoration: none;
+  color: #000000;
+}
+a:visited {
+  color: rgb(240,60,98);
+}
+a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: #000000;
+  background: rgb(240,60,98);
+}
+time {
+  font-size:12px;
+  background: rgb(243,234,222);
+}
+h1 {
+  font-size: 18px;
+  font-family: 'Roboto Mono', monospace;
+  position: fixed;
+  margin-left: -40px;
+  top: 5px;
+}
+h2 {
+  padding:40px;
+  color: #ffffff;
+  font-size: 18px;
+  background: #000000;
+}
+h2 a, h2 a:visited {
+  color: #ffffff;
+  font-size: 18px;
+  font-family: 'Arimo', cursive;
+}
+h3 {
+  font-size:14px; 
+}
+header{
+  position:fixed;
+}
+header ul.id {
+  width:290px;
+}
+header ul.id li {
+  color:#ffffff;
+  font-size: 20px;
+  margin: 0 0 20px -40px;
+  padding: 10px;
+  background: #000000;
+}
+header ul.id li table {
+  margin-top: -16px;
+  margin-bottom: 8px;
+  color:#000000;
+}
+img {
+  width:300px;
+  height:auto;
+  margin-bottom: 10px;
+}
+aside {
+  position: fixed;
+  top:80px;
+  right: 80px;
+  background: #000000;
+  padding: 15px;
+  width:300px;
+}
+aside h2 {
+  padding: 0;
+  margin-bottom: 10px;
+}
+aside ul {
+  margin: 0 0 20px 0;
+}
+aside ul li {
+  font-size: 12px;
+  color: #ffffff;
+  font-family: 'Roboto Mono', monospace;
+}
+section {
+  margin: 0 340px 0 340px;
+}
+article {
+  width: 330px;
+  margin-bottom: 20px;
+}
+article h2 {
+  padding: 0px;
+  font-size: 14px;
+  background: #c4c4c4;
+}
+footer{
+  z-index: 15;
+  margin-left: -40px;
+  position: fixed;
+  bottom: 10px;
+}
+footer a, footer a:visited {
+  color: #000000;
+}
+footer a:hover, footer a:focus, footer a:active {
+  text-decoration: none;
+  color: #ffffff;
+  background: #000000;
+}
+/*FLEX BOX
+https://developer.mozilla.org/fr/docs/Web/CSS/Disposition_des_bo%C3%AEtes_flexibles_CSS/Utilisation_des_flexbox_en_CSS
+*/
+section {
+  max-width: 760px;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+article {
+  margin-left: 20px;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+}
+
+/*
+Body border
+--------------------------------------------*/
+#top, #bottom, #left, #right {
+  background: #f03c62;
+  position: fixed;
+  }
+  #left, #right {
+    top: 0; bottom: 0;
+    width: 40px;
+    }
+    #left { left: 0; }
+    #right { right: 0; }
+    
+  #top, #bottom {
+    left: 0; right: 0;
+    height: 40px;
+    }
+    #top { top: 0; }
+    #bottom { z-index:10; bottom: 0; }
+
+/*
+TABLEAU
+ -------------------------------------------------------*/
+table {
+  margin: auto;
+}
+
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td {font-family:Arial, sans-serif;font-size:14px;padding:10px 16px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th {font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 16px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-21yu {background-color:#f03c62;vertical-align:top}
+.tg .tg-gqdk {background-color:#000000;vertical-align:top}
+
+
+.css3-blink {
+  /*-webkit-animation-name: blinker;  
+  -webkit-animation-iteration-count: infinite;  
+  -webkit-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+  -webkit-animation-duration: 1s;*/
+  -webkit-animation:webkitblinker 1s infinite;
+  -webkit-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+  -moz-animation:mozblinker 1s infinite;
+  -moz-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+  -o-animation:oblinker 1s infinite;
+  -o-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+  animation:blinker 1s infinite;
+  animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+
+}
+
+/*VIDEO --> http://www.alsacreations.com/xmedia/tuto/html5/video-fullscreen/test.html
+-------------*/
+#video-fond {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+#video-fond > video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+ /* QUERIES
+------------------------------------------------------- */
+@media screen and (min-width: 200px) and (max-width: 800px) {
+  #logo {
+    display:none;
+    clear:both;
+  }
+}
+
+@media screen and (max-width: 1238px) {
+section {
+    z-index: 1;
+    margin: 700px 0 0 0;
+    max-width:100%;
+  }
+aside, header {
+    position:absolute;
+  }
+
+article {
+    margin: 0;
+  }
+}
+/*VIDEO --> http://www.alsacreations.com/xmedia/tuto/html5/video-fullscreen/test.html
+-------------*/
+/* 1. Pas de support d'object-fit */
+@media (min-aspect-ratio: 16/9) {
+  #video-fond > video {
+    height: 300%;
+    top: -100%;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  #video-fond > video {
+    width: 300%;
+    left: -100%;
+  }
+}
+/* 2. En cas de support d'object-fit, écrase le 1 */
+@supports (object-fit: cover) {
+  #video-fond > video {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+}
+ /* body border
+------------------------------------------------------- */
+@media 
+
+/* Fairly small screens including iphones */
+only screen and (max-width: 500px),
+
+/* iPads */
+only screen and (min-device-width: 768px) and (max-device-width: 1024px) 
+
+{
+  #top, #bottom, #left, #right { display: none; }
+}
